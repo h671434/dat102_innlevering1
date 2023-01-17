@@ -7,7 +7,7 @@ public class Filmarkiv implements FilmarkivADT{
 	private Film[] filmer;
 	private int nesteLedig;
 	
-	public static Filmarkiv(int antall) {
+	public Filmarkiv(int antall) {
 		filmer = new Film[antall];
 		nesteLedig = 0;
 	}
