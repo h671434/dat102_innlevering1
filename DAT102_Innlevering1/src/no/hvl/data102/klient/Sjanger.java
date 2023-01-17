@@ -1,4 +1,4 @@
-package no.hvl.data102.adt;
+package no.hvl.data102.klient;
 
 public enum Sjanger {
 	ACTION, DRAMA, HISTORY, SCIFI;

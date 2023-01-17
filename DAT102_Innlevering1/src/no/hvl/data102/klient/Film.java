@@ -1,4 +1,4 @@
-package no.hvl.data102.adt;
+package no.hvl.data102.klient;
 
 import java.util.Objects;
 
