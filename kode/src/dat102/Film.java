@@ -76,4 +76,10 @@ public class Film {
     public int hashCode() {
         return Objects.hash(movieNum);
     }
+
+    @Override
+    public String toString(){
+        return movieNum + " " + this.producer + " " + " " + this.title + " " + this.year + " " +
+        this.genre.toString().toLowerCase() + " " + this.company;
+    }
 }

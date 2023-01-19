@@ -1,13 +1,16 @@
 package dat102;
 
 
+import dat102.adt.FilmArkiv;
+import dat102.adt.FilmArkivADT;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TextUI {
     public Film lesFilm(){
 
-        int movieNum = isInt("What is the movie? ");
+        int movieNum = isInt("What is the movie number? ");
         String producer = isString("What is the producer? ");
         String title = isString("What is the title? ");
         int year = isInt("What year was the movie released? ");
@@ -55,7 +58,21 @@ public class TextUI {
     }
 
     public void showMovie(Film movie){
-        
+        String[] movieInfo = movie.toString().split(" ");
+        for(String i : movieInfo){
+            System.out.println(i);
+        }
+    }
+
+    public void showMovieWithStringInTitle(FilmArkivADT filma, String part){
+        Film[] matches = filma.searchTitle("part");
+        for(Film match : matches){
+            showMovie(match);
+            System.out.println("\nnext movie:");
+        }
+    }
+    public void showMovieFromProducer(FilmArkivADT filma, String keyword){
+        filma
     }
 
 

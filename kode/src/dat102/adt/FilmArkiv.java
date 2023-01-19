@@ -16,6 +16,10 @@ public class FilmArkiv implements FilmArkivADT {
         this.nextFree = 0;
     }
 
+    public Film[] getMovieList(){
+        return movieList;
+    }
+
     private void extend(){
         Film[] newMovieList = new Film[movieList.length * 2];
         System.arraycopy(newMovieList, 0, movieList, 0, movieList.length);
