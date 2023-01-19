@@ -4,7 +4,11 @@ import dat102.Film;
 import dat102.Sjanger;
 public interface FilmArkivADT {
 
-
+    /**
+     *
+     * @return array with all the film objects
+     */
+    Film[] getMovieList();
     /**
      * Gets a movie given the number
      * @param nr number of the movie

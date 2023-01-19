@@ -72,7 +72,20 @@ public class TextUI {
         }
     }
     public void showMovieFromProducer(FilmArkivADT filma, String keyword){
-        filma
+        Film[] movies = filma.getMovieList();
+        for(Film f : movies){
+            if(f.getProducer().equals(keyword)){
+                showMovie(f);
+            }
+        }
+    }
+
+    public void showStats(FilmArkivADT filma){
+        for(Sjanger sj : Sjanger.values()){
+            System.out.println(sj.toString().toLowerCase() + ": " + filma.numInGenre(sj));
+        }
+        System.out.println("Total number of movies: " + filma.amount());
+
     }
 
 
