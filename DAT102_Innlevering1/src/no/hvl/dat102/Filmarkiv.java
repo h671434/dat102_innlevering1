@@ -1,4 +1,4 @@
-package no.hvl.data102.klient;
+package no.hvl.dat102;
 
 import no.hvl.data102.adt.FilmarkivADT;
 
@@ -59,6 +59,21 @@ public class Filmarkiv implements FilmarkivADT{
 		
 		for(Film f : filmer) {
 			if(f.getTittel().contains(delstreng)) {
+				resultat[antallResultat] = f;
+				antallResultat++;
+			}
+		}
+		
+		return trimTabell(resultat, antallResultat);
+	}
+	
+	@Override
+	public Film[] soekProdusent(String delstreng) {
+		Film[] resultat = new Film[nesteLedig];
+		int antallResultat = 0;
+		
+		for(Film f : filmer) {
+			if(f.getProdusent().contains(delstreng)) {
 				resultat[antallResultat] = f;
 				antallResultat++;
 			}
