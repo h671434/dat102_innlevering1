@@ -1,5 +1,7 @@
-package dat102;
+package dat102.klient;
 
+import dat102.Film;
+import dat102.Sjanger;
 import dat102.adt.FilmArkivADT;
 
 public class Meny {

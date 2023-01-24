@@ -1,7 +1,8 @@
-package dat102.adt;
+package dat102;
 
 import dat102.Film;
 import dat102.Sjanger;
+import dat102.adt.FilmArkivADT;
 
 public class FilmArkiv implements FilmArkivADT {
 

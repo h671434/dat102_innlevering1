@@ -104,7 +104,7 @@ function for how time varies with n on a specific computer.
 
 In practice, it doesn't work quite as well as we can see by running the java class in this directory.
 On my machine the average time from running the method 200 times was 12.0, 92.0, and 613.6 ms. This doesn't match the
-theory to such a great extent as the average should increase by 10 each time n increases by a factor of 10.
+theory to such a great extent as the average should increase by a factor of 10 each time n increases by a factor of 10.
 
 
 
