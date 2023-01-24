@@ -22,7 +22,7 @@ public class TekstGrensesnitt {
 				String produsent = input[1];
 				String tittel = input[2];
 				int aar = Integer.valueOf(input[3]);
-				Sjanger sjanger = Sjanger.valueOf(input[4].toUpperCase());
+				Sjanger sjanger = Sjanger.finnSjanger(input[4]);
 				String selskap = input[5];
 				
 				film = new Film(nr, produsent, tittel, aar, sjanger, selskap);

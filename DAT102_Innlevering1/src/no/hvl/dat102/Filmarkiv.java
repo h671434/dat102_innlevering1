@@ -82,7 +82,7 @@ public class Filmarkiv implements FilmarkivADT{
 		return trimTabell(resultat, antallResultat);
 	}
 	
-	private Film[] trimTabell(Film[] tabell, int lengde) {
+	private static Film[] trimTabell(Film[] tabell, int lengde) {
 		Film[] trimmet = new Film[lengde];
 		for(int i = 0; i < lengde; i++)
 			trimmet[i] = tabell[i];
