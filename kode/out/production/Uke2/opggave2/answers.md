@@ -2,10 +2,12 @@
 
 > question 2a: 
 
-   i: 4*n^2 + 50*n - 10 -> O(n^2) \
-   ii: 10*n + 4* log_2(n) + 30 -> O(n) \
-   iii: 13*n^3 22*n^2 + 50*n + 20 -> O(n^3) \
+```txt
+   i: 4*n^2 + 50*n - 10 -> O(n^2) 
+   ii: 10*n + 4* log_2(n) + 30 -> O(n) 
+   iii: 13*n^3 22*n^2 + 50*n + 20 -> O(n^3) 
    iv: 35 + 13*log_2(n) -> O(log(n))
+```
 
 > question 2b
 
@@ -50,17 +52,19 @@ sum = 0;
 
 Find big O and the number of iterations in the worst case
 
+```java
 boolean harDuplikat(int tabell[], int n) {
 
 for (int indeks = 0; indeks <= n - 2; indeks++) {
-for (int igjen = indeks + 1; igjen <= n - 1; igjen++) {
-if (tabell[indeks] == tabell[igjen]){
-return true;
-}
-}
-}
+    for (int igjen = indeks + 1; igjen <= n - 1; igjen++) {
+        if (tabell[indeks] == tabell[igjen]){
+            return true;
+          }
+        }
+    }
 return false;
 }
+```
 
 It's O(n^2) for the same reason as 2d is, even though there are less iterations of this loop as igjen is a higher value for each iteration
 In the worst case the number of iterations is the sum of n + (n-1) + (n-2) + ... + 1 = (n^2 + n)/2.
@@ -98,7 +102,10 @@ t(n) = c*n
 if we solve for the constant when we know the time it takes for an algorithm to compute and n we can find the
 function for how time varies with n on a specific computer.
 
-In practice it doesn't work quite as well
+In practice, it doesn't work quite as well as we can see by running the java class in this directory.
+On my machine the average time from running the method 200 times was 12.0, 92.0, and 613.6 ms. This doesn't match the
+theory to such a great extent as the average should increase by a factor of 10 each time n increases by a factor of 10.
+
 
 
 
